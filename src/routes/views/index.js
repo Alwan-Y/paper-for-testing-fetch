@@ -1,8 +1,8 @@
 import express from 'express'
-import PostController from '../../controllers/PostController'
+import pageController from '../../controllers/pageController'
 
 const router = express.Router()
 
-router.get('/index', PostController.getIndexView)
+router.get('/', pageController.userPage)
 
 export default router

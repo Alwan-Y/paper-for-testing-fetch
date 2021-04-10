@@ -14,4 +14,4 @@ app.set('views', 'src/views')
 app.use('/', views)
 app.use('/apis', apis)
 
-app.listen(3000, () => console.log('running'))
+app.listen(3000, () => console.log('Running'))

@@ -1,11 +1,9 @@
 import express from 'express'
-import PostController from '../../controllers/PostController'
+import resultController from '../../controllers/resultController'
 
 const router = express.Router()
 
-router.get('/posts', PostController.get)
-router.post('/posts', PostController.create)
-router.patch('/posts/:id', PostController.update)
-router.delete('/posts/:id', PostController.delete)
+router.post('/posts', resultController.addItems)
+router.post('/items', resultController.getTax)
 
 export default router
