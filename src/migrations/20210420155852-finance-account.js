@@ -1,9 +1,9 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('Result', {
-      id: {
-        type: Sequelize.STRING,
-        primaryKey: true,
+    await queryInterface.createTable('FinanceAccount', {
+      finance_account_id: {
+        type: Sequelize.UUID,
+        primaryKey: false,
         allowNull: false,
         unique: true,
       },
@@ -11,17 +11,18 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      itemName: {
+      description: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      amount: {
-        type: Sequelize.INTEGER,
+      type: {
+        type: Sequelize.STRING,
         allowNull: false,
       },
     });
   },
+
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Result');
+    await queryInterface.dropTable('FinanceAccount');
   },
 };
