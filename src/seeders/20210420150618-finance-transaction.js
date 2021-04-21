@@ -12,6 +12,7 @@ module.exports = {
           debit_amount: 12000,
           credit_amount: 12000,
           title: 'Beban Makan',
+          finance_account_name: "Expenses"
         },
       ],
       {}

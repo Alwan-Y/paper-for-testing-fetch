@@ -9,6 +9,7 @@ class financeController {
         credit_amount,
         description,
         finance_account_type_id,
+        finance_account_name,
       } = req.body;
 
       const createNewTransaction = FinanceTransaction.create({
@@ -17,6 +18,7 @@ class financeController {
         credit_amount,
         description,
         finance_account_type_id,
+        finance_account_name,
       });
 
       return res.status(200).send({ message: 'Succes add new transaction' });
@@ -44,6 +46,7 @@ class financeController {
         credit_amount,
         description,
         finance_account_type_id,
+        finance_account_name,
       } = req.body;
 
       const findingData = await FinanceTransaction.findOne({
@@ -63,6 +66,7 @@ class financeController {
           credit_amount,
           description,
           finance_account_type_id,
+          finance_account_name,
         },
         { where: { finance_account_id } }
       );

@@ -29,6 +29,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      finance_account_name: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      }
     });
   },
 

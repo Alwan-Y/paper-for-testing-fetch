@@ -33,6 +33,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      finance_account_name: {
+        type: DataTypes.STRING,
+        allowNull: false
+      }
     },
     {
       sequelize,
